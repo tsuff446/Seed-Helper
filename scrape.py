@@ -41,7 +41,7 @@ def get_entrant_data(slug):
         print('Error:')
         print(resData['errors'])
     else:
-        print('Success!')
+        print('Successfully got user ids')
     return resData
     
 def get_user_winrate(user_id):
@@ -78,6 +78,8 @@ def get_user_winrate(user_id):
     matches = resData['data']['user']['player']['sets']['nodes']
     win = 0
     loss = 0
+    if(not matches):
+        return -1
     for curr_set in matches:
         curr_match = curr_set['displayScore']
         if curr_match != "DQ" and curr_match:
