@@ -45,7 +45,7 @@ def get_entrant_data(slug):
     return resData
     
 def get_user_winrate(user_id):
-    authToken = "325a2c28e4e510e9135f2616fab83ca6"
+    authToken = ""
     apiVersion = "alpha"
 
     client = GraphQLClient('https://api.smash.gg/gql/' + apiVersion)
